@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7432100bce1c4b1db90dcf30b13203c8" Name="Diagrama1" ZoomLevel="77">
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_cat_area" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_cat_dga" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_cat_empresa" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_cat_equipo_computo_marca" Width="1.5" PointX="23.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_cat_equipo_telefono_modelo" Width="1.5" PointX="23.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_cat_piso" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_cat_regional" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_cat_switch" Width="1.5" PointX="18" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_cat_tipo_equipo" Width="1.5" PointX="20.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_cat_wireless" Width="1.5" PointX="23" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_ip" Width="1.5" PointX="19.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_ip_historico" Width="1.5" PointX="19.375" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_usuario" Width="1.5" PointX="10.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bit_usuario_historico" Width="1.5" PointX="11.5" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdd_bitacora_ipModel.tb_bt_cat_equipo_computo_modelo" Width="1.5" PointX="15.125" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_area" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_dga" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_empresa" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_marca" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_equipo_computo_marca" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo1" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_equipo_telefono_modelo" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_piso" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_regional" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_tipo_equipo" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_tipo_equipo" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_wireless" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_wireless" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bt_cat_equipo_computo_modelo" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_area" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_dga" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_empresa" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_piso" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_regional" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_switch" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_switch" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_usuario" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_usuario" />
+        <AssociationConnector Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_modelo" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

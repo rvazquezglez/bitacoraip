@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdd_bitacora_ipModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="bdd_bitacora_ipEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_bit_cat_area" EntityType="bdd_bitacora_ipModel.tb_bit_cat_area" />
+    <EntitySet Name="tb_bit_cat_dga" EntityType="bdd_bitacora_ipModel.tb_bit_cat_dga" />
+    <EntitySet Name="tb_bit_cat_empresa" EntityType="bdd_bitacora_ipModel.tb_bit_cat_empresa" />
+    <EntitySet Name="tb_bit_cat_equipo_computo_marca" EntityType="bdd_bitacora_ipModel.tb_bit_cat_equipo_computo_marca" />
+    <EntitySet Name="tb_bit_cat_equipo_telefono_modelo" EntityType="bdd_bitacora_ipModel.tb_bit_cat_equipo_telefono_modelo" />
+    <EntitySet Name="tb_bit_cat_piso" EntityType="bdd_bitacora_ipModel.tb_bit_cat_piso" />
+    <EntitySet Name="tb_bit_cat_regional" EntityType="bdd_bitacora_ipModel.tb_bit_cat_regional" />
+    <EntitySet Name="tb_bit_cat_switch" EntityType="bdd_bitacora_ipModel.tb_bit_cat_switch" />
+    <EntitySet Name="tb_bit_cat_tipo_equipo" EntityType="bdd_bitacora_ipModel.tb_bit_cat_tipo_equipo" />
+    <EntitySet Name="tb_bit_cat_wireless" EntityType="bdd_bitacora_ipModel.tb_bit_cat_wireless" />
+    <EntitySet Name="tb_bit_ip" EntityType="bdd_bitacora_ipModel.tb_bit_ip" />
+    <EntitySet Name="tb_bit_ip_historico" EntityType="bdd_bitacora_ipModel.tb_bit_ip_historico" />
+    <EntitySet Name="tb_bit_usuario" EntityType="bdd_bitacora_ipModel.tb_bit_usuario" />
+    <EntitySet Name="tb_bit_usuario_historico" EntityType="bdd_bitacora_ipModel.tb_bit_usuario_historico" />
+    <EntitySet Name="tb_bt_cat_equipo_computo_modelo" EntityType="bdd_bitacora_ipModel.tb_bt_cat_equipo_computo_modelo" />
+    <AssociationSet Name="FK_tb_bit_usuario_tb_bit_cat_area" Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_area">
+      <End Role="tb_bit_cat_area" EntitySet="tb_bit_cat_area" />
+      <End Role="tb_bit_usuario" EntitySet="tb_bit_usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_usuario_tb_bit_cat_dga" Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_dga">
+      <End Role="tb_bit_cat_dga" EntitySet="tb_bit_cat_dga" />
+      <End Role="tb_bit_usuario" EntitySet="tb_bit_usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_usuario_tb_bit_cat_empresa" Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_empresa">
+      <End Role="tb_bit_cat_empresa" EntitySet="tb_bit_cat_empresa" />
+      <End Role="tb_bit_usuario" EntitySet="tb_bit_usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_marca" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_marca">
+      <End Role="tb_bit_cat_equipo_computo_marca" EntitySet="tb_bit_cat_equipo_computo_marca" />
+      <End Role="tb_bit_ip_historico" EntitySet="tb_bit_ip_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_tb_bit_cat_equipo_computo_marca" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_equipo_computo_marca">
+      <End Role="tb_bit_cat_equipo_computo_marca" EntitySet="tb_bit_cat_equipo_computo_marca" />
+      <End Role="tb_bit_ip" EntitySet="tb_bit_ip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo">
+      <End Role="tb_bit_cat_equipo_telefono_modelo" EntitySet="tb_bit_cat_equipo_telefono_modelo" />
+      <End Role="tb_bit_ip_historico" EntitySet="tb_bit_ip_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo1" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo1">
+      <End Role="tb_bit_cat_equipo_telefono_modelo" EntitySet="tb_bit_cat_equipo_telefono_modelo" />
+      <End Role="tb_bit_ip_historico" EntitySet="tb_bit_ip_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_tb_bit_cat_equipo_telefono_modelo" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_equipo_telefono_modelo">
+      <End Role="tb_bit_cat_equipo_telefono_modelo" EntitySet="tb_bit_cat_equipo_telefono_modelo" />
+      <End Role="tb_bit_ip" EntitySet="tb_bit_ip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_usuario_tb_bit_cat_piso" Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_piso">
+      <End Role="tb_bit_cat_piso" EntitySet="tb_bit_cat_piso" />
+      <End Role="tb_bit_usuario" EntitySet="tb_bit_usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_usuario_tb_bit_cat_regional" Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_regional">
+      <End Role="tb_bit_cat_regional" EntitySet="tb_bit_cat_regional" />
+      <End Role="tb_bit_usuario" EntitySet="tb_bit_usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_historico_tb_bit_cat_tipo_equipo" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_tipo_equipo">
+      <End Role="tb_bit_cat_tipo_equipo" EntitySet="tb_bit_cat_tipo_equipo" />
+      <End Role="tb_bit_ip_historico" EntitySet="tb_bit_ip_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_tb_bit_cat_tipo_equipo" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_tipo_equipo">
+      <End Role="tb_bit_cat_tipo_equipo" EntitySet="tb_bit_cat_tipo_equipo" />
+      <End Role="tb_bit_ip" EntitySet="tb_bit_ip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_historico_tb_bit_cat_wireless" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_wireless">
+      <End Role="tb_bit_cat_wireless" EntitySet="tb_bit_cat_wireless" />
+      <End Role="tb_bit_ip_historico" EntitySet="tb_bit_ip_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_tb_bit_cat_wireless" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_wireless">
+      <End Role="tb_bit_cat_wireless" EntitySet="tb_bit_cat_wireless" />
+      <End Role="tb_bit_ip" EntitySet="tb_bit_ip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_tb_bt_cat_equipo_computo_modelo" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bt_cat_equipo_computo_modelo">
+      <End Role="tb_bt_cat_equipo_computo_modelo" EntitySet="tb_bt_cat_equipo_computo_modelo" />
+      <End Role="tb_bit_ip" EntitySet="tb_bit_ip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_usuario_historico_tb_bit_cat_area" Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_area">
+      <End Role="tb_bit_cat_area" EntitySet="tb_bit_cat_area" />
+      <End Role="tb_bit_usuario_historico" EntitySet="tb_bit_usuario_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_usuario_historico_tb_bit_cat_dga" Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_dga">
+      <End Role="tb_bit_cat_dga" EntitySet="tb_bit_cat_dga" />
+      <End Role="tb_bit_usuario_historico" EntitySet="tb_bit_usuario_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_usuario_historico_tb_bit_cat_empresa" Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_empresa">
+      <End Role="tb_bit_cat_empresa" EntitySet="tb_bit_cat_empresa" />
+      <End Role="tb_bit_usuario_historico" EntitySet="tb_bit_usuario_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_usuario_historico_tb_bit_cat_piso" Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_piso">
+      <End Role="tb_bit_cat_piso" EntitySet="tb_bit_cat_piso" />
+      <End Role="tb_bit_usuario_historico" EntitySet="tb_bit_usuario_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_usuario_historico_tb_bit_cat_regional" Association="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_regional">
+      <End Role="tb_bit_cat_regional" EntitySet="tb_bit_cat_regional" />
+      <End Role="tb_bit_usuario_historico" EntitySet="tb_bit_usuario_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_historico_tb_bit_cat_switch" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_switch">
+      <End Role="tb_bit_cat_switch" EntitySet="tb_bit_cat_switch" />
+      <End Role="tb_bit_ip_historico" EntitySet="tb_bit_ip_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_tb_bit_cat_switch" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_switch">
+      <End Role="tb_bit_cat_switch" EntitySet="tb_bit_cat_switch" />
+      <End Role="tb_bit_ip" EntitySet="tb_bit_ip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_tb_bit_usuario" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_usuario">
+      <End Role="tb_bit_usuario" EntitySet="tb_bit_usuario" />
+      <End Role="tb_bit_ip" EntitySet="tb_bit_ip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_historico_tb_bit_usuario" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_usuario">
+      <End Role="tb_bit_usuario" EntitySet="tb_bit_usuario" />
+      <End Role="tb_bit_ip_historico" EntitySet="tb_bit_ip_historico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_modelo" Association="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_modelo">
+      <End Role="tb_bt_cat_equipo_computo_modelo" EntitySet="tb_bt_cat_equipo_computo_modelo" />
+      <End Role="tb_bit_ip_historico" EntitySet="tb_bit_ip_historico" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tb_bit_cat_area">
+    <Key>
+      <PropertyRef Name="pk_cve_area" />
+    </Key>
+    <Property Name="pk_cve_area" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_area" Type="String" Nullable="false" MaxLength="60" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_usuario" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_area" FromRole="tb_bit_cat_area" ToRole="tb_bit_usuario" />
+    <NavigationProperty Name="tb_bit_usuario_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_area" FromRole="tb_bit_cat_area" ToRole="tb_bit_usuario_historico" />
+  </EntityType>
+  <EntityType Name="tb_bit_cat_dga">
+    <Key>
+      <PropertyRef Name="pk_cve_dga" />
+    </Key>
+    <Property Name="pk_cve_dga" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_dga" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_usuario" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_dga" FromRole="tb_bit_cat_dga" ToRole="tb_bit_usuario" />
+    <NavigationProperty Name="tb_bit_usuario_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_dga" FromRole="tb_bit_cat_dga" ToRole="tb_bit_usuario_historico" />
+  </EntityType>
+  <EntityType Name="tb_bit_cat_empresa">
+    <Key>
+      <PropertyRef Name="pk_cve_empresa" />
+    </Key>
+    <Property Name="pk_cve_empresa" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_empresa" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_usuario" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_empresa" FromRole="tb_bit_cat_empresa" ToRole="tb_bit_usuario" />
+    <NavigationProperty Name="tb_bit_usuario_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_empresa" FromRole="tb_bit_cat_empresa" ToRole="tb_bit_usuario_historico" />
+  </EntityType>
+  <EntityType Name="tb_bit_cat_equipo_computo_marca">
+    <Key>
+      <PropertyRef Name="pk_cve_equipo_computo_marca" />
+    </Key>
+    <Property Name="pk_cve_equipo_computo_marca" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_equipo_computo_marca" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_ip_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_marca" FromRole="tb_bit_cat_equipo_computo_marca" ToRole="tb_bit_ip_historico" />
+    <NavigationProperty Name="tb_bit_ip" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_equipo_computo_marca" FromRole="tb_bit_cat_equipo_computo_marca" ToRole="tb_bit_ip" />
+  </EntityType>
+  <EntityType Name="tb_bit_cat_equipo_telefono_modelo">
+    <Key>
+      <PropertyRef Name="pk_cve_equipo_telefono_modelo" />
+    </Key>
+    <Property Name="pk_cve_equipo_telefono_modelo" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_equipo_telefono_modelo" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_ip_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo" FromRole="tb_bit_cat_equipo_telefono_modelo" ToRole="tb_bit_ip_historico" />
+    <NavigationProperty Name="tb_bit_ip_historico1" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo1" FromRole="tb_bit_cat_equipo_telefono_modelo" ToRole="tb_bit_ip_historico" />
+    <NavigationProperty Name="tb_bit_ip" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_equipo_telefono_modelo" FromRole="tb_bit_cat_equipo_telefono_modelo" ToRole="tb_bit_ip" />
+  </EntityType>
+  <EntityType Name="tb_bit_cat_piso">
+    <Key>
+      <PropertyRef Name="pk_cve_piso" />
+    </Key>
+    <Property Name="pk_cve_piso" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_piso" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_usuario" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_piso" FromRole="tb_bit_cat_piso" ToRole="tb_bit_usuario" />
+    <NavigationProperty Name="tb_bit_usuario_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_piso" FromRole="tb_bit_cat_piso" ToRole="tb_bit_usuario_historico" />
+  </EntityType>
+  <EntityType Name="tb_bit_cat_regional">
+    <Key>
+      <PropertyRef Name="pk_cve_regional" />
+    </Key>
+    <Property Name="pk_cve_regional" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_regional" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
+    <Property Name="des_mnemonico" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_usuario" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_regional" FromRole="tb_bit_cat_regional" ToRole="tb_bit_usuario" />
+    <NavigationProperty Name="tb_bit_usuario_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_regional" FromRole="tb_bit_cat_regional" ToRole="tb_bit_usuario_historico" />
+  </EntityType>
+  <EntityType Name="tb_bit_cat_switch">
+    <Key>
+      <PropertyRef Name="pk_cve_switch" />
+    </Key>
+    <Property Name="pk_cve_switch" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_cve_switch" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="des_puerto" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="des_roseta" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_ip_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_switch" FromRole="tb_bit_cat_switch" ToRole="tb_bit_ip_historico" />
+    <NavigationProperty Name="tb_bit_ip" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_switch" FromRole="tb_bit_cat_switch" ToRole="tb_bit_ip" />
+  </EntityType>
+  <EntityType Name="tb_bit_cat_tipo_equipo">
+    <Key>
+      <PropertyRef Name="pk_cve_tipo_equipo" />
+    </Key>
+    <Property Name="pk_cve_tipo_equipo" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_tipo_equipo" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_ip_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_tipo_equipo" FromRole="tb_bit_cat_tipo_equipo" ToRole="tb_bit_ip_historico" />
+    <NavigationProperty Name="tb_bit_ip" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_tipo_equipo" FromRole="tb_bit_cat_tipo_equipo" ToRole="tb_bit_ip" />
+  </EntityType>
+  <EntityType Name="tb_bit_cat_wireless">
+    <Key>
+      <PropertyRef Name="pk_cve_wir" />
+    </Key>
+    <Property Name="pk_cve_wir" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_wir" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_ip_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_wireless" FromRole="tb_bit_cat_wireless" ToRole="tb_bit_ip_historico" />
+    <NavigationProperty Name="tb_bit_ip" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_wireless" FromRole="tb_bit_cat_wireless" ToRole="tb_bit_ip" />
+  </EntityType>
+  <EntityType Name="tb_bit_ip">
+    <Key>
+      <PropertyRef Name="pk_cve_ip" />
+      <PropertyRef Name="pfk_cve_usuario" />
+      <PropertyRef Name="pfk_cve_switch" />
+    </Key>
+    <Property Name="pk_cve_ip" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="pfk_cve_usuario" Type="Int32" Nullable="false" />
+    <Property Name="pfk_cve_switch" Type="Int32" Nullable="false" />
+    <Property Name="cve_mac" Type="String" Nullable="false" MaxLength="17" Unicode="true" FixedLength="false" />
+    <Property Name="nom_equipo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="nom_resguardo_equipo_computo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="cve_equipo_computo_serie" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="cve_equipo_telefono_extension" Type="Int32" Nullable="false" />
+    <Property Name="cve_equipo_telefono_serie" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="fk_cve_tipo_equipo" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_mac_wireless" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_equipo_computo_marca" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_equipo_computo_modelo" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_equipo_telefono_modelo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_bit_cat_equipo_computo_marca" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_equipo_computo_marca" FromRole="tb_bit_ip" ToRole="tb_bit_cat_equipo_computo_marca" />
+    <NavigationProperty Name="tb_bit_cat_equipo_telefono_modelo" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_equipo_telefono_modelo" FromRole="tb_bit_ip" ToRole="tb_bit_cat_equipo_telefono_modelo" />
+    <NavigationProperty Name="tb_bit_cat_tipo_equipo" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_tipo_equipo" FromRole="tb_bit_ip" ToRole="tb_bit_cat_tipo_equipo" />
+    <NavigationProperty Name="tb_bit_cat_wireless" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_wireless" FromRole="tb_bit_ip" ToRole="tb_bit_cat_wireless" />
+    <NavigationProperty Name="tb_bt_cat_equipo_computo_modelo" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bt_cat_equipo_computo_modelo" FromRole="tb_bit_ip" ToRole="tb_bt_cat_equipo_computo_modelo" />
+    <NavigationProperty Name="tb_bit_cat_switch" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_cat_switch" FromRole="tb_bit_ip" ToRole="tb_bit_cat_switch" />
+    <NavigationProperty Name="tb_bit_usuario" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_usuario" FromRole="tb_bit_ip" ToRole="tb_bit_usuario" />
+  </EntityType>
+  <EntityType Name="tb_bit_ip_historico">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha_cambio" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="cve_ip" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="cve_usuario" Type="Int32" Nullable="false" />
+    <Property Name="cve_switch" Type="Int32" Nullable="false" />
+    <Property Name="cve_mac" Type="String" Nullable="false" MaxLength="17" Unicode="true" FixedLength="false" />
+    <Property Name="nom_equipo" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="nom_resguardo_equipo_computo" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="cve_equipo_computo_serie" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="cve_equipo_telefono_extension" Type="Int32" Nullable="false" />
+    <Property Name="cve_equipo_telefono_serie" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="fk_cve_tipo_equipo" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_mac_wireless" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_equipo_computo_marca" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_equipo_computo_modelo" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_equipo_telefono_modelo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tb_bit_cat_equipo_computo_marca" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_marca" FromRole="tb_bit_ip_historico" ToRole="tb_bit_cat_equipo_computo_marca" />
+    <NavigationProperty Name="tb_bit_cat_equipo_telefono_modelo" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo" FromRole="tb_bit_ip_historico" ToRole="tb_bit_cat_equipo_telefono_modelo" />
+    <NavigationProperty Name="tb_bit_cat_equipo_telefono_modelo1" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo1" FromRole="tb_bit_ip_historico" ToRole="tb_bit_cat_equipo_telefono_modelo" />
+    <NavigationProperty Name="tb_bit_cat_tipo_equipo" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_tipo_equipo" FromRole="tb_bit_ip_historico" ToRole="tb_bit_cat_tipo_equipo" />
+    <NavigationProperty Name="tb_bit_cat_wireless" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_wireless" FromRole="tb_bit_ip_historico" ToRole="tb_bit_cat_wireless" />
+    <NavigationProperty Name="tb_bit_cat_switch" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_switch" FromRole="tb_bit_ip_historico" ToRole="tb_bit_cat_switch" />
+    <NavigationProperty Name="tb_bit_usuario" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_usuario" FromRole="tb_bit_ip_historico" ToRole="tb_bit_usuario" />
+    <NavigationProperty Name="tb_bt_cat_equipo_computo_modelo" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_modelo" FromRole="tb_bit_ip_historico" ToRole="tb_bt_cat_equipo_computo_modelo" />
+  </EntityType>
+  <EntityType Name="tb_bit_usuario">
+    <Key>
+      <PropertyRef Name="pk_cve_usuario" />
+    </Key>
+    <Property Name="pk_cve_usuario" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="nom_user_name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="nom_usuario" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ape_paterno" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ape_materno" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="fk_cve_dga" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_area" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_empresa" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_piso" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_regional" Type="Int32" Nullable="false" />
+    <Property Name="des_observacion" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="fec_alta" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fec_baja" Type="DateTime" Precision="3" />
+    <Property Name="fec_actualiza" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tb_bit_cat_area" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_area" FromRole="tb_bit_usuario" ToRole="tb_bit_cat_area" />
+    <NavigationProperty Name="tb_bit_cat_dga" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_dga" FromRole="tb_bit_usuario" ToRole="tb_bit_cat_dga" />
+    <NavigationProperty Name="tb_bit_cat_empresa" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_empresa" FromRole="tb_bit_usuario" ToRole="tb_bit_cat_empresa" />
+    <NavigationProperty Name="tb_bit_cat_piso" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_piso" FromRole="tb_bit_usuario" ToRole="tb_bit_cat_piso" />
+    <NavigationProperty Name="tb_bit_cat_regional" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_tb_bit_cat_regional" FromRole="tb_bit_usuario" ToRole="tb_bit_cat_regional" />
+    <NavigationProperty Name="tb_bit_ip" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bit_usuario" FromRole="tb_bit_usuario" ToRole="tb_bit_ip" />
+    <NavigationProperty Name="tb_bit_ip_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_usuario" FromRole="tb_bit_usuario" ToRole="tb_bit_ip_historico" />
+  </EntityType>
+  <EntityType Name="tb_bit_usuario_historico">
+    <Key>
+      <PropertyRef Name="pk_id" />
+    </Key>
+    <Property Name="pk_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha_cambio" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="cve_usuario" Type="Int32" Nullable="false" />
+    <Property Name="nom_user_name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="nom_usuario" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ape_paterno" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="ape_materno" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="fk_cve_dga" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_area" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_empresa" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_piso" Type="Int32" Nullable="false" />
+    <Property Name="fk_cve_regional" Type="Int32" Nullable="false" />
+    <Property Name="des_observacion" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="fec_alta" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fec_baja" Type="DateTime" Precision="3" />
+    <Property Name="fec_actualiza" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tb_bit_cat_area" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_area" FromRole="tb_bit_usuario_historico" ToRole="tb_bit_cat_area" />
+    <NavigationProperty Name="tb_bit_cat_dga" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_dga" FromRole="tb_bit_usuario_historico" ToRole="tb_bit_cat_dga" />
+    <NavigationProperty Name="tb_bit_cat_empresa" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_empresa" FromRole="tb_bit_usuario_historico" ToRole="tb_bit_cat_empresa" />
+    <NavigationProperty Name="tb_bit_cat_piso" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_piso" FromRole="tb_bit_usuario_historico" ToRole="tb_bit_cat_piso" />
+    <NavigationProperty Name="tb_bit_cat_regional" Relationship="bdd_bitacora_ipModel.FK_tb_bit_usuario_historico_tb_bit_cat_regional" FromRole="tb_bit_usuario_historico" ToRole="tb_bit_cat_regional" />
+  </EntityType>
+  <EntityType Name="tb_bt_cat_equipo_computo_modelo">
+    <Key>
+      <PropertyRef Name="pk_cve_equipo_computo_modelo" />
+    </Key>
+    <Property Name="pk_cve_equipo_computo_modelo" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="des_equipo_computo_modelo" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tb_bit_ip" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_tb_bt_cat_equipo_computo_modelo" FromRole="tb_bt_cat_equipo_computo_modelo" ToRole="tb_bit_ip" />
+    <NavigationProperty Name="tb_bit_ip_historico" Relationship="bdd_bitacora_ipModel.FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_modelo" FromRole="tb_bt_cat_equipo_computo_modelo" ToRole="tb_bit_ip_historico" />
+  </EntityType>
+  <Association Name="FK_tb_bit_usuario_tb_bit_cat_area">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_area" Role="tb_bit_cat_area" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario" Role="tb_bit_usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_area">
+        <PropertyRef Name="pk_cve_area" />
+      </Principal>
+      <Dependent Role="tb_bit_usuario">
+        <PropertyRef Name="fk_cve_area" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_usuario_tb_bit_cat_dga">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_dga" Role="tb_bit_cat_dga" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario" Role="tb_bit_usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_dga">
+        <PropertyRef Name="pk_cve_dga" />
+      </Principal>
+      <Dependent Role="tb_bit_usuario">
+        <PropertyRef Name="fk_cve_dga" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_usuario_tb_bit_cat_empresa">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_empresa" Role="tb_bit_cat_empresa" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario" Role="tb_bit_usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_empresa">
+        <PropertyRef Name="pk_cve_empresa" />
+      </Principal>
+      <Dependent Role="tb_bit_usuario">
+        <PropertyRef Name="fk_cve_empresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_marca">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_equipo_computo_marca" Role="tb_bit_cat_equipo_computo_marca" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip_historico" Role="tb_bit_ip_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_equipo_computo_marca">
+        <PropertyRef Name="pk_cve_equipo_computo_marca" />
+      </Principal>
+      <Dependent Role="tb_bit_ip_historico">
+        <PropertyRef Name="fk_cve_equipo_computo_marca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_tb_bit_cat_equipo_computo_marca">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_equipo_computo_marca" Role="tb_bit_cat_equipo_computo_marca" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip" Role="tb_bit_ip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_equipo_computo_marca">
+        <PropertyRef Name="pk_cve_equipo_computo_marca" />
+      </Principal>
+      <Dependent Role="tb_bit_ip">
+        <PropertyRef Name="fk_cve_equipo_computo_marca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_equipo_telefono_modelo" Role="tb_bit_cat_equipo_telefono_modelo" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip_historico" Role="tb_bit_ip_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_equipo_telefono_modelo">
+        <PropertyRef Name="pk_cve_equipo_telefono_modelo" />
+      </Principal>
+      <Dependent Role="tb_bit_ip_historico">
+        <PropertyRef Name="fk_cve_equipo_computo_modelo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_historico_tb_bit_cat_equipo_telefono_modelo1">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_equipo_telefono_modelo" Role="tb_bit_cat_equipo_telefono_modelo" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip_historico" Role="tb_bit_ip_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_equipo_telefono_modelo">
+        <PropertyRef Name="pk_cve_equipo_telefono_modelo" />
+      </Principal>
+      <Dependent Role="tb_bit_ip_historico">
+        <PropertyRef Name="fk_cve_equipo_telefono_modelo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_tb_bit_cat_equipo_telefono_modelo">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_equipo_telefono_modelo" Role="tb_bit_cat_equipo_telefono_modelo" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip" Role="tb_bit_ip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_equipo_telefono_modelo">
+        <PropertyRef Name="pk_cve_equipo_telefono_modelo" />
+      </Principal>
+      <Dependent Role="tb_bit_ip">
+        <PropertyRef Name="fk_cve_equipo_telefono_modelo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_usuario_tb_bit_cat_piso">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_piso" Role="tb_bit_cat_piso" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario" Role="tb_bit_usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_piso">
+        <PropertyRef Name="pk_cve_piso" />
+      </Principal>
+      <Dependent Role="tb_bit_usuario">
+        <PropertyRef Name="fk_cve_piso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_usuario_tb_bit_cat_regional">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_regional" Role="tb_bit_cat_regional" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario" Role="tb_bit_usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_regional">
+        <PropertyRef Name="pk_cve_regional" />
+      </Principal>
+      <Dependent Role="tb_bit_usuario">
+        <PropertyRef Name="fk_cve_regional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_historico_tb_bit_cat_tipo_equipo">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_tipo_equipo" Role="tb_bit_cat_tipo_equipo" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip_historico" Role="tb_bit_ip_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_tipo_equipo">
+        <PropertyRef Name="pk_cve_tipo_equipo" />
+      </Principal>
+      <Dependent Role="tb_bit_ip_historico">
+        <PropertyRef Name="fk_cve_tipo_equipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_tb_bit_cat_tipo_equipo">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_tipo_equipo" Role="tb_bit_cat_tipo_equipo" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip" Role="tb_bit_ip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_tipo_equipo">
+        <PropertyRef Name="pk_cve_tipo_equipo" />
+      </Principal>
+      <Dependent Role="tb_bit_ip">
+        <PropertyRef Name="fk_cve_tipo_equipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_historico_tb_bit_cat_wireless">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_wireless" Role="tb_bit_cat_wireless" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip_historico" Role="tb_bit_ip_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_wireless">
+        <PropertyRef Name="pk_cve_wir" />
+      </Principal>
+      <Dependent Role="tb_bit_ip_historico">
+        <PropertyRef Name="fk_cve_mac_wireless" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_tb_bit_cat_wireless">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_wireless" Role="tb_bit_cat_wireless" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip" Role="tb_bit_ip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_wireless">
+        <PropertyRef Name="pk_cve_wir" />
+      </Principal>
+      <Dependent Role="tb_bit_ip">
+        <PropertyRef Name="fk_cve_mac_wireless" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_tb_bt_cat_equipo_computo_modelo">
+    <End Type="bdd_bitacora_ipModel.tb_bt_cat_equipo_computo_modelo" Role="tb_bt_cat_equipo_computo_modelo" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip" Role="tb_bit_ip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bt_cat_equipo_computo_modelo">
+        <PropertyRef Name="pk_cve_equipo_computo_modelo" />
+      </Principal>
+      <Dependent Role="tb_bit_ip">
+        <PropertyRef Name="fk_cve_equipo_computo_modelo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_usuario_historico_tb_bit_cat_area">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_area" Role="tb_bit_cat_area" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario_historico" Role="tb_bit_usuario_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_area">
+        <PropertyRef Name="pk_cve_area" />
+      </Principal>
+      <Dependent Role="tb_bit_usuario_historico">
+        <PropertyRef Name="fk_cve_area" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_usuario_historico_tb_bit_cat_dga">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_dga" Role="tb_bit_cat_dga" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario_historico" Role="tb_bit_usuario_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_dga">
+        <PropertyRef Name="pk_cve_dga" />
+      </Principal>
+      <Dependent Role="tb_bit_usuario_historico">
+        <PropertyRef Name="fk_cve_dga" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_usuario_historico_tb_bit_cat_empresa">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_empresa" Role="tb_bit_cat_empresa" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario_historico" Role="tb_bit_usuario_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_empresa">
+        <PropertyRef Name="pk_cve_empresa" />
+      </Principal>
+      <Dependent Role="tb_bit_usuario_historico">
+        <PropertyRef Name="fk_cve_empresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_usuario_historico_tb_bit_cat_piso">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_piso" Role="tb_bit_cat_piso" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario_historico" Role="tb_bit_usuario_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_piso">
+        <PropertyRef Name="pk_cve_piso" />
+      </Principal>
+      <Dependent Role="tb_bit_usuario_historico">
+        <PropertyRef Name="fk_cve_piso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_usuario_historico_tb_bit_cat_regional">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_regional" Role="tb_bit_cat_regional" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario_historico" Role="tb_bit_usuario_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_regional">
+        <PropertyRef Name="pk_cve_regional" />
+      </Principal>
+      <Dependent Role="tb_bit_usuario_historico">
+        <PropertyRef Name="fk_cve_regional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_historico_tb_bit_cat_switch">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_switch" Role="tb_bit_cat_switch" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip_historico" Role="tb_bit_ip_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_switch">
+        <PropertyRef Name="pk_cve_switch" />
+      </Principal>
+      <Dependent Role="tb_bit_ip_historico">
+        <PropertyRef Name="cve_switch" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_tb_bit_cat_switch">
+    <End Type="bdd_bitacora_ipModel.tb_bit_cat_switch" Role="tb_bit_cat_switch" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip" Role="tb_bit_ip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_cat_switch">
+        <PropertyRef Name="pk_cve_switch" />
+      </Principal>
+      <Dependent Role="tb_bit_ip">
+        <PropertyRef Name="pfk_cve_switch" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_tb_bit_usuario">
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario" Role="tb_bit_usuario" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip" Role="tb_bit_ip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_usuario">
+        <PropertyRef Name="pk_cve_usuario" />
+      </Principal>
+      <Dependent Role="tb_bit_ip">
+        <PropertyRef Name="pfk_cve_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_historico_tb_bit_usuario">
+    <End Type="bdd_bitacora_ipModel.tb_bit_usuario" Role="tb_bit_usuario" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip_historico" Role="tb_bit_ip_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bit_usuario">
+        <PropertyRef Name="pk_cve_usuario" />
+      </Principal>
+      <Dependent Role="tb_bit_ip_historico">
+        <PropertyRef Name="cve_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_bit_ip_historico_tb_bit_cat_equipo_computo_modelo">
+    <End Type="bdd_bitacora_ipModel.tb_bt_cat_equipo_computo_modelo" Role="tb_bt_cat_equipo_computo_modelo" Multiplicity="1" />
+    <End Type="bdd_bitacora_ipModel.tb_bit_ip_historico" Role="tb_bit_ip_historico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_bt_cat_equipo_computo_modelo">
+        <PropertyRef Name="pk_cve_equipo_computo_modelo" />
+      </Principal>
+      <Dependent Role="tb_bit_ip_historico">
+        <PropertyRef Name="fk_cve_equipo_computo_modelo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

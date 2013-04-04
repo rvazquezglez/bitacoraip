@@ -1,0 +1,29 @@
+﻿@model BitacoraDireccionesIp.Models.tb_bit_cat_area
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>tb_bit_cat_area</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pk_cve_area)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pk_cve_area)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.des_area)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.des_area)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

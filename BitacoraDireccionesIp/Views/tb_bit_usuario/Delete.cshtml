@@ -1,0 +1,116 @@
+﻿@model BitacoraDireccionesIp.Models.tb_bit_usuario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>tb_bit_usuario</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pk_cve_usuario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pk_cve_usuario)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nom_user_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nom_user_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nom_usuario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nom_usuario)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ape_paterno)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ape_paterno)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ape_materno)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ape_materno)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_cat_dga.des_dga)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_cat_dga.des_dga)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_cat_area.des_area)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_cat_area.des_area)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_cat_empresa.des_empresa)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_cat_empresa.des_empresa)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_cat_piso.des_piso)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_cat_piso.des_piso)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_cat_regional.des_regional)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_cat_regional.des_regional)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.des_observacion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.des_observacion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fec_alta)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fec_alta)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fec_baja)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fec_baja)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fec_actualiza)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fec_actualiza)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

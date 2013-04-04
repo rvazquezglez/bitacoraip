@@ -1,0 +1,32 @@
+﻿@model BitacoraDireccionesIp.Models.tb_bit_cat_area
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>tb_bit_cat_area</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pk_cve_area)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pk_cve_area)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.des_area)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.des_area)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

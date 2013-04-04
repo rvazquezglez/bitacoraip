@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdd_bitacora_ipModelStoreContainer" CdmEntityContainer="bdd_bitacora_ipEntities">
+    <EntitySetMapping Name="tb_bit_cat_area">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_cat_area">
+        <MappingFragment StoreEntitySet="tb_bit_cat_area">
+          <ScalarProperty Name="pk_cve_area" ColumnName="pk_cve_area" />
+          <ScalarProperty Name="des_area" ColumnName="des_area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_cat_dga">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_cat_dga">
+        <MappingFragment StoreEntitySet="tb_bit_cat_dga">
+          <ScalarProperty Name="pk_cve_dga" ColumnName="pk_cve_dga" />
+          <ScalarProperty Name="des_dga" ColumnName="des_dga" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_cat_empresa">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_cat_empresa">
+        <MappingFragment StoreEntitySet="tb_bit_cat_empresa">
+          <ScalarProperty Name="pk_cve_empresa" ColumnName="pk_cve_empresa" />
+          <ScalarProperty Name="des_empresa" ColumnName="des_empresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_cat_equipo_computo_marca">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_cat_equipo_computo_marca">
+        <MappingFragment StoreEntitySet="tb_bit_cat_equipo_computo_marca">
+          <ScalarProperty Name="pk_cve_equipo_computo_marca" ColumnName="pk_cve_equipo_computo_marca" />
+          <ScalarProperty Name="des_equipo_computo_marca" ColumnName="des_equipo_computo_marca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_cat_equipo_telefono_modelo">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_cat_equipo_telefono_modelo">
+        <MappingFragment StoreEntitySet="tb_bit_cat_equipo_telefono_modelo">
+          <ScalarProperty Name="pk_cve_equipo_telefono_modelo" ColumnName="pk_cve_equipo_telefono_modelo" />
+          <ScalarProperty Name="des_equipo_telefono_modelo" ColumnName="des_equipo_telefono_modelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_cat_piso">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_cat_piso">
+        <MappingFragment StoreEntitySet="tb_bit_cat_piso">
+          <ScalarProperty Name="pk_cve_piso" ColumnName="pk_cve_piso" />
+          <ScalarProperty Name="des_piso" ColumnName="des_piso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_cat_regional">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_cat_regional">
+        <MappingFragment StoreEntitySet="tb_bit_cat_regional">
+          <ScalarProperty Name="pk_cve_regional" ColumnName="pk_cve_regional" />
+          <ScalarProperty Name="des_regional" ColumnName="des_regional" />
+          <ScalarProperty Name="des_mnemonico" ColumnName="des_mnemonico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_cat_switch">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_cat_switch">
+        <MappingFragment StoreEntitySet="tb_bit_cat_switch">
+          <ScalarProperty Name="pk_cve_switch" ColumnName="pk_cve_switch" />
+          <ScalarProperty Name="des_cve_switch" ColumnName="des_cve_switch" />
+          <ScalarProperty Name="des_puerto" ColumnName="des_puerto" />
+          <ScalarProperty Name="des_roseta" ColumnName="des_roseta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_cat_tipo_equipo">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_cat_tipo_equipo">
+        <MappingFragment StoreEntitySet="tb_bit_cat_tipo_equipo">
+          <ScalarProperty Name="pk_cve_tipo_equipo" ColumnName="pk_cve_tipo_equipo" />
+          <ScalarProperty Name="des_tipo_equipo" ColumnName="des_tipo_equipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_cat_wireless">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_cat_wireless">
+        <MappingFragment StoreEntitySet="tb_bit_cat_wireless">
+          <ScalarProperty Name="pk_cve_wir" ColumnName="pk_cve_wir" />
+          <ScalarProperty Name="des_wir" ColumnName="des_wir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_ip">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_ip">
+        <MappingFragment StoreEntitySet="tb_bit_ip">
+          <ScalarProperty Name="pk_cve_ip" ColumnName="pk_cve_ip" />
+          <ScalarProperty Name="pfk_cve_usuario" ColumnName="pfk_cve_usuario" />
+          <ScalarProperty Name="pfk_cve_switch" ColumnName="pfk_cve_switch" />
+          <ScalarProperty Name="cve_mac" ColumnName="cve_mac" />
+          <ScalarProperty Name="nom_equipo" ColumnName="nom_equipo" />
+          <ScalarProperty Name="nom_resguardo_equipo_computo" ColumnName="nom_resguardo_equipo_computo" />
+          <ScalarProperty Name="cve_equipo_computo_serie" ColumnName="cve_equipo_computo_serie" />
+          <ScalarProperty Name="cve_equipo_telefono_extension" ColumnName="cve_equipo_telefono_extension" />
+          <ScalarProperty Name="cve_equipo_telefono_serie" ColumnName="cve_equipo_telefono_serie" />
+          <ScalarProperty Name="fk_cve_tipo_equipo" ColumnName="fk_cve_tipo_equipo" />
+          <ScalarProperty Name="fk_cve_mac_wireless" ColumnName="fk_cve_mac_wireless" />
+          <ScalarProperty Name="fk_cve_equipo_computo_marca" ColumnName="fk_cve_equipo_computo_marca" />
+          <ScalarProperty Name="fk_cve_equipo_computo_modelo" ColumnName="fk_cve_equipo_computo_modelo" />
+          <ScalarProperty Name="fk_cve_equipo_telefono_modelo" ColumnName="fk_cve_equipo_telefono_modelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_ip_historico">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_ip_historico">
+        <MappingFragment StoreEntitySet="tb_bit_ip_historico">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fecha_cambio" ColumnName="fecha_cambio" />
+          <ScalarProperty Name="cve_ip" ColumnName="cve_ip" />
+          <ScalarProperty Name="cve_usuario" ColumnName="cve_usuario" />
+          <ScalarProperty Name="cve_switch" ColumnName="cve_switch" />
+          <ScalarProperty Name="cve_mac" ColumnName="cve_mac" />
+          <ScalarProperty Name="nom_equipo" ColumnName="nom_equipo" />
+          <ScalarProperty Name="nom_resguardo_equipo_computo" ColumnName="nom_resguardo_equipo_computo" />
+          <ScalarProperty Name="cve_equipo_computo_serie" ColumnName="cve_equipo_computo_serie" />
+          <ScalarProperty Name="cve_equipo_telefono_extension" ColumnName="cve_equipo_telefono_extension" />
+          <ScalarProperty Name="cve_equipo_telefono_serie" ColumnName="cve_equipo_telefono_serie" />
+          <ScalarProperty Name="fk_cve_tipo_equipo" ColumnName="fk_cve_tipo_equipo" />
+          <ScalarProperty Name="fk_cve_mac_wireless" ColumnName="fk_cve_mac_wireless" />
+          <ScalarProperty Name="fk_cve_equipo_computo_marca" ColumnName="fk_cve_equipo_computo_marca" />
+          <ScalarProperty Name="fk_cve_equipo_computo_modelo" ColumnName="fk_cve_equipo_computo_modelo" />
+          <ScalarProperty Name="fk_cve_equipo_telefono_modelo" ColumnName="fk_cve_equipo_telefono_modelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_usuario">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_usuario">
+        <MappingFragment StoreEntitySet="tb_bit_usuario">
+          <ScalarProperty Name="pk_cve_usuario" ColumnName="pk_cve_usuario" />
+          <ScalarProperty Name="nom_user_name" ColumnName="nom_user_name" />
+          <ScalarProperty Name="nom_usuario" ColumnName="nom_usuario" />
+          <ScalarProperty Name="ape_paterno" ColumnName="ape_paterno" />
+          <ScalarProperty Name="ape_materno" ColumnName="ape_materno" />
+          <ScalarProperty Name="fk_cve_dga" ColumnName="fk_cve_dga" />
+          <ScalarProperty Name="fk_cve_area" ColumnName="fk_cve_area" />
+          <ScalarProperty Name="fk_cve_empresa" ColumnName="fk_cve_empresa" />
+          <ScalarProperty Name="fk_cve_piso" ColumnName="fk_cve_piso" />
+          <ScalarProperty Name="fk_cve_regional" ColumnName="fk_cve_regional" />
+          <ScalarProperty Name="des_observacion" ColumnName="des_observacion" />
+          <ScalarProperty Name="fec_alta" ColumnName="fec_alta" />
+          <ScalarProperty Name="fec_baja" ColumnName="fec_baja" />
+          <ScalarProperty Name="fec_actualiza" ColumnName="fec_actualiza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bit_usuario_historico">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bit_usuario_historico">
+        <MappingFragment StoreEntitySet="tb_bit_usuario_historico">
+          <ScalarProperty Name="pk_id" ColumnName="pk_id" />
+          <ScalarProperty Name="fecha_cambio" ColumnName="fecha_cambio" />
+          <ScalarProperty Name="cve_usuario" ColumnName="cve_usuario" />
+          <ScalarProperty Name="nom_user_name" ColumnName="nom_user_name" />
+          <ScalarProperty Name="nom_usuario" ColumnName="nom_usuario" />
+          <ScalarProperty Name="ape_paterno" ColumnName="ape_paterno" />
+          <ScalarProperty Name="ape_materno" ColumnName="ape_materno" />
+          <ScalarProperty Name="fk_cve_dga" ColumnName="fk_cve_dga" />
+          <ScalarProperty Name="fk_cve_area" ColumnName="fk_cve_area" />
+          <ScalarProperty Name="fk_cve_empresa" ColumnName="fk_cve_empresa" />
+          <ScalarProperty Name="fk_cve_piso" ColumnName="fk_cve_piso" />
+          <ScalarProperty Name="fk_cve_regional" ColumnName="fk_cve_regional" />
+          <ScalarProperty Name="des_observacion" ColumnName="des_observacion" />
+          <ScalarProperty Name="fec_alta" ColumnName="fec_alta" />
+          <ScalarProperty Name="fec_baja" ColumnName="fec_baja" />
+          <ScalarProperty Name="fec_actualiza" ColumnName="fec_actualiza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bt_cat_equipo_computo_modelo">
+      <EntityTypeMapping TypeName="bdd_bitacora_ipModel.tb_bt_cat_equipo_computo_modelo">
+        <MappingFragment StoreEntitySet="tb_bt_cat_equipo_computo_modelo">
+          <ScalarProperty Name="pk_cve_equipo_computo_modelo" ColumnName="pk_cve_equipo_computo_modelo" />
+          <ScalarProperty Name="des_equipo_computo_modelo" ColumnName="des_equipo_computo_modelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

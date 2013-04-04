@@ -1,0 +1,139 @@
+﻿@model BitacoraDireccionesIp.Models.tb_bit_ip
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>tb_bit_ip</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.pk_cve_ip)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.pk_cve_ip)
+            @Html.ValidationMessageFor(model => model.pk_cve_ip)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.pfk_cve_usuario, "tb_bit_usuario")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("pfk_cve_usuario", String.Empty)
+            @Html.ValidationMessageFor(model => model.pfk_cve_usuario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.pfk_cve_switch, "tb_bit_cat_switch")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("pfk_cve_switch", String.Empty)
+            @Html.ValidationMessageFor(model => model.pfk_cve_switch)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cve_mac)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cve_mac)
+            @Html.ValidationMessageFor(model => model.cve_mac)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nom_equipo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nom_equipo)
+            @Html.ValidationMessageFor(model => model.nom_equipo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nom_resguardo_equipo_computo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nom_resguardo_equipo_computo)
+            @Html.ValidationMessageFor(model => model.nom_resguardo_equipo_computo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cve_equipo_computo_serie)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cve_equipo_computo_serie)
+            @Html.ValidationMessageFor(model => model.cve_equipo_computo_serie)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cve_equipo_telefono_extension)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cve_equipo_telefono_extension)
+            @Html.ValidationMessageFor(model => model.cve_equipo_telefono_extension)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.cve_equipo_telefono_serie)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.cve_equipo_telefono_serie)
+            @Html.ValidationMessageFor(model => model.cve_equipo_telefono_serie)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fk_cve_tipo_equipo, "tb_bit_cat_tipo_equipo")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fk_cve_tipo_equipo", String.Empty)
+            @Html.ValidationMessageFor(model => model.fk_cve_tipo_equipo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fk_cve_mac_wireless, "tb_bit_cat_wireless")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fk_cve_mac_wireless", String.Empty)
+            @Html.ValidationMessageFor(model => model.fk_cve_mac_wireless)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fk_cve_equipo_computo_marca, "tb_bit_cat_equipo_computo_marca")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fk_cve_equipo_computo_marca", String.Empty)
+            @Html.ValidationMessageFor(model => model.fk_cve_equipo_computo_marca)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fk_cve_equipo_computo_modelo, "tb_bt_cat_equipo_computo_modelo")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fk_cve_equipo_computo_modelo", String.Empty)
+            @Html.ValidationMessageFor(model => model.fk_cve_equipo_computo_modelo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fk_cve_equipo_telefono_modelo, "tb_bit_cat_equipo_telefono_modelo")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fk_cve_equipo_telefono_modelo", String.Empty)
+            @Html.ValidationMessageFor(model => model.fk_cve_equipo_telefono_modelo)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

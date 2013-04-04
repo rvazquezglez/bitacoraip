@@ -1,0 +1,120 @@
+﻿@model BitacoraDireccionesIp.Models.tb_bit_usuario
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>tb_bit_usuario</legend>
+        @Html.HiddenFor(model => model.pk_cve_usuario)
+        
+        
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nom_user_name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nom_user_name)
+            @Html.ValidationMessageFor(model => model.nom_user_name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nom_usuario)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nom_usuario)
+            @Html.ValidationMessageFor(model => model.nom_usuario)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ape_paterno)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ape_paterno)
+            @Html.ValidationMessageFor(model => model.ape_paterno)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ape_materno)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ape_materno)
+            @Html.ValidationMessageFor(model => model.ape_materno)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fk_cve_dga, "tb_bit_cat_dga")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fk_cve_dga", String.Empty)
+            @Html.ValidationMessageFor(model => model.fk_cve_dga)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fk_cve_area, "tb_bit_cat_area")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fk_cve_area", String.Empty)
+            @Html.ValidationMessageFor(model => model.fk_cve_area)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fk_cve_empresa, "tb_bit_cat_empresa")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fk_cve_empresa", String.Empty)
+            @Html.ValidationMessageFor(model => model.fk_cve_empresa)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fk_cve_piso, "tb_bit_cat_piso")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fk_cve_piso", String.Empty)
+            @Html.ValidationMessageFor(model => model.fk_cve_piso)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fk_cve_regional, "tb_bit_cat_regional")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("fk_cve_regional", String.Empty)
+            @Html.ValidationMessageFor(model => model.fk_cve_regional)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.des_observacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.des_observacion)            
+            @Html.ValidationMessageFor(model => model.des_observacion)
+        </div>
+        
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<script type="text/javascript">
+        $(function() {
+            $('.datepicker').datepicker(); //Initialise any date pickers
+            $('input[type="datetime"]').datepicker();
+            //$('#fec_alta').datepicker();
+            
+            $('.datepicker').css("z-index", "9999");
+        });
+    </script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

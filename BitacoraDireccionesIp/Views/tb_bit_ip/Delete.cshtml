@@ -1,0 +1,116 @@
+﻿@model BitacoraDireccionesIp.Models.tb_bit_ip
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>tb_bit_ip</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pk_cve_ip)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pk_cve_ip)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_usuario.nom_user_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_usuario.nom_user_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_cat_switch.des_cve_switch)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_cat_switch.des_cve_switch)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cve_mac)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cve_mac)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nom_equipo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nom_equipo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nom_resguardo_equipo_computo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nom_resguardo_equipo_computo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cve_equipo_computo_serie)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cve_equipo_computo_serie)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cve_equipo_telefono_extension)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cve_equipo_telefono_extension)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cve_equipo_telefono_serie)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cve_equipo_telefono_serie)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_cat_tipo_equipo.des_tipo_equipo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_cat_tipo_equipo.des_tipo_equipo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_cat_wireless.des_wir)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_cat_wireless.des_wir)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_cat_equipo_computo_marca.des_equipo_computo_marca)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_cat_equipo_computo_marca.des_equipo_computo_marca)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bt_cat_equipo_computo_modelo.des_equipo_computo_modelo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bt_cat_equipo_computo_modelo.des_equipo_computo_modelo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tb_bit_cat_equipo_telefono_modelo.des_equipo_telefono_modelo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tb_bit_cat_equipo_telefono_modelo.des_equipo_telefono_modelo)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
