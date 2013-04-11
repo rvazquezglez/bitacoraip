@@ -176,6 +176,8 @@
     <Compile Include="Controllers\tb_bit_cat_areaController.cs" />
     <Compile Include="Controllers\tb_bit_ipController.cs" />
     <Compile Include="Controllers\tb_bit_usuarioController.cs" />
+    <Compile Include="ExcelResult.cs" />
+    <Compile Include="FieldList.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

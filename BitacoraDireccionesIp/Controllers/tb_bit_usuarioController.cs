@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web.Mvc;
 using BitacoraDireccionesIp.Models;
 using System.Transactions;
+using System.Web.UI.WebControls;
 
 namespace BitacoraDireccionesIp.Controllers
 {
@@ -180,6 +181,38 @@ namespace BitacoraDireccionesIp.Controllers
             return RedirectToAction("Index");
         }
 
+        /// <summary>
+        /// Generates Excel document using headers grabbed from property names
+        /// </summary>
+        public ActionResult GenerateExcel1()
+        {
+            return new ExcelResult(db, db.tb_bit_usuario, "data.xls");
+        }
+        
+
+        /// <summary>
+        /// Generates Excel document using supplied headers
+        /// </summary>
+        public ActionResult GenerateExcel2()
+        {
+            var rows = from m in db.tb_bit_usuario select new { nom_user_name = m.nom_user_name, nom_usuario = m.nom_usuario };
+            return new ExcelResult(db, rows, "data.xls", new[] { "nom_user_name", "nom_usuario" });
+        }
+
+        
+
+        /// <summary>
+        /// Generates Excel document using supplied headers and using supplied styles
+        /// </summary>
+        public ActionResult GenerateExcel3()
+        {
+            var rows = from m in db.tb_bit_usuario select new { nom_user_name = m.nom_user_name, nom_usuario = m.nom_usuario };
+            var headerStyle = new TableItemStyle();
+            headerStyle.BackColor = System.Drawing.Color.Orange;
+            return new ExcelResult(db, rows, "data.xls", new[] { "nom_user_name", "nom_usuario" }, null, headerStyle, null);
+        }
+
+        
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

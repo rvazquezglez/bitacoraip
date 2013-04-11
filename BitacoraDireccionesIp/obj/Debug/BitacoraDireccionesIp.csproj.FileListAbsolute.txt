@@ -61,3 +61,4 @@ D:\Mis Documentos\Visual Studio 2012\projects\BitacoraDireccionesIp\BitacoraDire
 D:\Mis Documentos\Visual Studio 2012\projects\BitacoraDireccionesIp\BitacoraDireccionesIp\obj\Debug\BitacoraDireccionesIp.dll
 D:\Mis Documentos\Visual Studio 2012\projects\BitacoraDireccionesIp\BitacoraDireccionesIp\obj\Debug\BitacoraDireccionesIp.pdb
 D:\Mis Documentos\Visual Studio 2012\projects\BitacoraDireccionesIp\BitacoraDireccionesIp\bin\Microsoft.Web.Mvc.dll
+D:\Mis Documentos\Visual Studio 2012\projects\BitacoraDireccionesIp\BitacoraDireccionesIp\obj\Debug\BitacoraDireccionesIp.csprojResolveAssemblyReference.cache
